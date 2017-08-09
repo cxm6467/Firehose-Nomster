@@ -1,8 +1,8 @@
 <% @places.each do |place| %>
   <div class="booyah-box col-10 offset-1">
-    <h1><%= place.name %>
-    <i><%= place.address %>
-    <p><%= place.description %>
+    <h1><%= link_to place.name, place_path(place) %></h1><br />
+    <i><%= place.address %></i>
+    <p><%= place.description %></p>
 
     <% if place.user.present? %>
       <small><%= place.user.email %></small>
@@ -10,7 +10,7 @@
   </div>
 <% end %>
   <div class="col-10 offset-1">
-   <%= will_paginate @places %>
+   <% will_paginate @places %>
   </div>
 
 

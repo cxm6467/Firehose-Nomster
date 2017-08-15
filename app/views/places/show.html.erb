@@ -41,7 +41,7 @@
   <div class="clear"></div>
   <%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
     <%= f.input :message %>
-    <%= f.input :rating %>
+    <%= f.input :ratingm as: :select, collection: Comment::RATINGS %>
     <%= f.submit "Add a comment", class: 'btn btn-primary' %>
   <% end %>
   <br />

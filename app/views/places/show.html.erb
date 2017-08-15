@@ -46,9 +46,12 @@
   <% end %>
   <br />
 
+
+  <!-- Trouble Area -->
+
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Add a comment -- Modal
+  Launch demo modal
 </button>
 
 <!-- Modal -->
@@ -56,17 +59,13 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add a Comment</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
-          <%= f.input :message %>
-          <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
-          <%= f.submit "Add a comment", class: 'btn btn-primary' %>
-        <% end %>
+        ...
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -77,17 +76,20 @@
 </div>
 
 
+  <!-- /Trouble Area -->
+
+
 
   <h1> Comments </h1>
 <% @place.comments.each do |comment| %>
 <div>
-  <blockquote>
-    <% if comment.humanized_rating.present? %>
+    <blockquote>
+      <% if comment.humanized_rating.present? %>
         <b><%= comment.humanized_rating %></b> -
-    <% end %>
-    <%= comment.message %>
-    <small><%= comment.user.email %></small>
-  </blockquote>
+      <% end %>
+      <%= comment.message %>
+      <small><%= comment.user.email %></small>
+    </blockquote>
 </div>
 <% end %>
 

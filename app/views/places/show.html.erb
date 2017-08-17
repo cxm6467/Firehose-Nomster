@@ -32,7 +32,7 @@
 
   <div class="float-right">
   <% if current_user && current_user == @place.user %>
-        <button type="button" class="btn btn-secondary btn-md float-right" data-toggle="modal" data-target="#photoModal">
+        <button type="button" class="btn btn-secondary btn-md" data-toggle="modal" data-target="#photoModal">
           Add a Photo
         </button>
   	<%= link_to 'Edit', edit_place_path, class: 'btn btn-primary' %>
@@ -121,11 +121,13 @@
   </div>
 
   <!-- Show Photos -->
-  <div class="row">
-    <% @place.photos.each do |photo| %>
-          <%= image_tag photo.picture %>
-          <%= photo.caption %>
-      </div>
+  <div class="row col-12">
+    <div class="booyah-box col-6 offset-1">
+      <% @place.photos.each do |photo| %>
+            <%= image_tag photo.picture, class: 'float-left' %>
+           
+    </div>
+       <p class="float-right caption col-6"><%= photo.caption %></p>
     <% end %>
   </div>
   <!-- End Show Photos -->

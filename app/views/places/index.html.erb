@@ -14,7 +14,8 @@
             <b><%= place.comments.last.humanized_rating %></b> -
           <% end %>
           <%= place.comments.last.message %>
-          <%= image_tag place.photos.last.picture%>
+          
+          <%= image_tag place.photos.last.picture %>
 
           <small><%= place.comments.last.user.email %></small>
         </blockquote>

@@ -123,12 +123,12 @@
 
   <!-- Show Photos -->
   <div class="row col-12">
-    <div class="booyah-box col-6 offset-1">
+    <div class="booyah-box col-6">
       <% @place.photos.each do |photo| %>
             <%= image_tag photo.picture, class: 'float-left' %>
            
     </div>
-       <p class="float-right caption col-6"><%= photo.caption %></p>
+       <p class="float-right col-6">-- <%= photo.caption %></p>
     <% end %>
   </div>
   <!-- End Show Photos -->

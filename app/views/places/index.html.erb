@@ -50,10 +50,11 @@
           <%= place.comments.last.message %>
           <small><%= place.comments.last.user.email %></small>
         </blockquote>
-
+        <div class="booyah-box">
           <% if place.photos.last.present? %>
             <%= image_tag place.photos.last.picture, class: "img-fluid center-block" %>
           <% end %>
+        </div>
     </div>
     <% end %>
   </div>

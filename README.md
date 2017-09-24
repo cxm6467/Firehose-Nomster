@@ -1,24 +1,10 @@
-# README
+# Nomster
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
+A Yelp clone that integrates with the Google Map API and includes features like user comments, star ratings, image uploading, and user authentication. Also an introduction into algorithms and object-oriented programming.
 
-Things you may want to cover:
+## Purpose
+This application introduced the use of outside API's as well as integrating with Amazon Web Services' S3 cloud storage.  Introduced in this round is the start of challenges to implement code that was in previous apps like Bootstrap.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Link to active application
+[Nomster](https://nomster-chris-marasco.herokuapp.com/)
